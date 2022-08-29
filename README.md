@@ -1,4 +1,10 @@
 # go-console-progressbar
 
 Console progress bar written in Go.
-Usage examples see in "example" folder.
+
+Features:
+- flexible progress bar settings 
+- print messages when progress working 
+- simple result colorization 
+
+Usage examples see in "examples" folder.
