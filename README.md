@@ -1,6 +1,4 @@
-# go-console-progressbar
-
-Console progress bar written in Go.
+# Console progress bar written in Go
 
 Features:
 - flexible progress bar settings 
@@ -8,3 +6,6 @@ Features:
 - simple result colorization 
 
 Usage examples see in "examples" folder.
+
+## Screen
+![Progressbar](/screen.png)

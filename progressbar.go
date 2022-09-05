@@ -120,7 +120,10 @@ func (pb *ProgresBar) render(pool *ProgresBarPool) {
 		rederC = color.Green
 	}
 
-	pool.writeCh <- fmt.Sprintf("%s %s %s\n%s", linePref, getProgresLine(pb.Min, pb.Max, pb.Val, renderW, rederC), title, linePostf)
+	line := getProgresLine(pb.Min, pb.Max, pb.Val, renderW, rederC) + " " + title
+	lineBack := fmt.Sprintf("\033[%dD", len(line)) // return cursor back to line begin
+
+	pool.writeCh <- fmt.Sprintf("%s%s%s%s", linePref, line, lineBack, linePostf)
 }
 
 func getProgresLine(min int, max int, val int, width int, rColor string) string {
